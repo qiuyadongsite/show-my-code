@@ -9,6 +9,7 @@
   <version>1.0-SNAPSHOT</version>
     <modules>
         <module>show-me-common</module>
+        <module>show-spring-parent</module>
     </modules>
     <packaging>pom</packaging>
   <name>show-my-code</name>
