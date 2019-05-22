@@ -6,7 +6,7 @@ $(function(){
             alert("登录信息不能为空!");
             return;
         }
-        $("#password").val(MD5(password));
+        $("#password").val(password);
         $.ajax({
             url:"/login",
             type:"POST",

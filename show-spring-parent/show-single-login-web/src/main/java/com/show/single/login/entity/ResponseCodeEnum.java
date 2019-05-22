@@ -1,7 +1,14 @@
 package com.show.single.login.entity;
 
 public enum ResponseCodeEnum {
-    SUCCESS("00","登录成功！"),FAIL("01","登录失败！");
+
+    USERORPASSWORD_ERRROR("001001","用户名或密码不存在"),
+    SUCCESS("000000","成功"),
+    SYS_PARAM_NOT_RIGHT("001002","请求参数错误"),
+    TOKEN_EXPIRE("001003","token过期"),
+    SIGNATURE_ERROR("001004","签名验证失败"),
+    QUERY_DATA_NOT_EXIST("001005","请求数据不存在"),
+    SYSTEM_BUSY("001099","系统繁忙，请稍候重试");
 
     private String code;
     private String msg;
