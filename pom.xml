@@ -10,6 +10,7 @@
     <modules>
         <module>show-me-common</module>
         <module>show-spring-parent</module>
+        <module>show-me-ability</module>
     </modules>
     <packaging>pom</packaging>
   <name>show-my-code</name>
