@@ -268,7 +268,83 @@ public class BinaryTreeDemo {
 
        /* binaryTreeDemo.afterLoadTree(root);*/
         /*binaryTreeDemo.nonPreLoadTree(root);*/
-        binaryTreeDemo.nonAfter(root);
+        binaryTreeDemo.nonAfterLoad(root);
+    }
+    /**
+     *     A
+     *  B     C
+     D    E  G    F
+     */
+
+    //非迭代后序调用
+
+    public void nonAfterLoad(BinaryTreeNode node){
+
+        Stack<BinaryTreeNode> stack = new Stack<>();
+
+        BinaryTreeNode cur=node;
+        BinaryTreeNode pre= null;
+
+        while (!stack.isEmpty()||cur!=null){
+
+            while (cur!=null){
+                stack.push(cur);
+                cur = cur.leftNode;
+            }
+
+            cur=stack.peek();
+
+            if(cur.rightNode==null||cur.rightNode==pre){
+                stack.pop();
+                System.out.println("non after load:"+ cur.data);
+
+                pre= cur;
+                cur=null;
+            }else{
+                cur=cur.rightNode;
+            }
+
+        }
     }
 
+    //非迭代中序调用
+    public void nonMidLoad(BinaryTreeNode node){
+
+        Stack<BinaryTreeNode> stack=new Stack<>();
+        BinaryTreeNode cur = node;
+
+        while (!stack.isEmpty()||cur!=null){
+            while(cur!=null){
+                stack.push(cur);
+                cur=cur.leftNode;
+            }
+            cur= stack.pop();
+            System.out.println("non mid load:"+cur.data);
+
+            cur= cur.rightNode;
+        }
+    }
+
+    //非迭代前序调用
+
+    public void nonPreLoad(BinaryTreeNode node){
+
+        Stack<BinaryTreeNode> stack=new Stack<>();
+        stack.push(node);
+
+        while (!stack.isEmpty()){
+            node=stack.pop();
+            System.out.println("non pre load:"+node.data);
+
+            if(node.rightNode!=null){
+                stack.push(node.rightNode);
+            }
+
+            if(node.leftNode!=null){
+                stack.push(node.leftNode);
+            }
+        }
+
+
+    }
 }
