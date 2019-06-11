@@ -7,7 +7,7 @@ package com.qyd.learn.show.algorithm.sort;
  */
 public class SelectSort extends BaseSort {
     @Override
-    protected int[] doSort(int[] a) {
+    public int[] doSort(int[] a) {
         for (int i = 0; i < a.length; i++) {
             int index=i;
             int min=a[i];

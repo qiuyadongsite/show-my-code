@@ -30,6 +30,10 @@ public abstract class BaseSort {
             System.out.print(" "+i);
         }
     };
+    protected void printStr(String str){
+            System.out.print(str);
+
+    };
 
     protected abstract int[] doSort(int[] a);
 }
