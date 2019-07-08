@@ -30,27 +30,27 @@ package com.qyd.learn.show.leetcode;
 public class LeetCode003 {
     static class Solution {
         public int lengthOfLongestSubstring(String s) {
-            int retInt=0;
-            for(int i=0;i<s.length();i++){
-                String temStr=getDiff(s,i);
-                int length=temStr.length();
-                if(length>=retInt){
-                    retInt=length;
-                }
-            }
+           int retInt=0;
 
-            return retInt;
+           for(int i=0;i<s.length();i++){
+               String retStr=getDiff(s,i);
+               retInt=retStr.length()>retInt?retStr.length():retInt;
+           }
+           return  retInt;
         }
 
         private static String getDiff(String s, int i) {
+
             String retStr=s.charAt(i)+"";
+
             for(int j=i+1;j<s.length();j++){
-                String temStr=s.charAt(j)+"";
-                if(retStr.contains(temStr)){
+                String c=s.charAt(j)+"";
+                if(retStr.contains(c)){
                     break;
                 }
-                retStr=retStr+temStr;
+                retStr+=c;
             }
+
             return retStr;
         }
     }

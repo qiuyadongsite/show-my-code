@@ -11,8 +11,38 @@ public class LeetCodeDemo {
     public static void main(String[] args) {
       /*  testLeetCode001();*/
        /* testLeetCode002();*/
-        testLeetCode003();
+      /*  testLeetCode003();*/
+       /* testLeetCode004();*/
 
+        testLeetCode005();
+
+    }
+
+    private static void testLeetCode005() {
+        String s="qeasdfsadfsadfwerwqesadfsadasdfsadfsa";
+        String ret=new LeetCode005.Solution().longestPalindrome(s);
+        System.out.println(ret);
+
+    }
+
+    private static void testLeetCode004() {
+// * nums1 = [1, 3]
+// * nums2 = [2]
+// *
+// * 则中位数是 2.0
+// * 示例 2:
+// *
+// * nums1 = [1, 2]
+// * nums2 = [3, 4]
+// *
+// * 则中位数是 (2 + 3)/2 = 2.5
+
+        int[] num1=new int[]{1,2};
+        int[] num2=new int[]{-1,3};
+
+        double medianSortedArrays = new LeetCode004.Solution().findMedianSortedArrays(num1, num2);
+
+        System.out.println(medianSortedArrays);
     }
 
     private static void testLeetCode003() {
