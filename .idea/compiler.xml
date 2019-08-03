@@ -14,7 +14,7 @@
         <module name="show-single-login-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
       <module name="show-me-rpc-provider" target="1.8" />
     </bytecodeTargetLevel>
   </component>

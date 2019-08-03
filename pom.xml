@@ -11,7 +11,6 @@
         <module>show-me-common</module>
         <module>show-spring-parent</module>
         <module>show-me-ability</module>
-        <module>learn-resources-tomcat</module>
         <module>show-me-rpc</module>
     </modules>
     <packaging>pom</packaging>
