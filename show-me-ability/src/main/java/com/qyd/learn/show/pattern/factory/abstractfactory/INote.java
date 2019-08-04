@@ -5,5 +5,5 @@ package com.qyd.learn.show.pattern.factory.abstractfactory;
  * Created by qiuyd.
  */
 public interface INote {
-    void edit();
+    void  edit();
 }
