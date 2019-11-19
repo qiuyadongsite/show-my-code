@@ -23,6 +23,8 @@ public class SiginForThirdService implements ISiginForThirdService {
     }
 
     public ResultMsg loginForQQ(String id) {
+        System.out.println("use QQ login");
+        signinService.login(id,id);
         return null;
     }
 

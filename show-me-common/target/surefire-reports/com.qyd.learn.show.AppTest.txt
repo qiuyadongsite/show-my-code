@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.qyd.learn.show.AppTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.613 s <<< FAILURE! - in com.qyd.learn.show.AppTest
-shouldAnswerWithTrue(com.qyd.learn.show.AppTest)  Time elapsed: 0.572 s  <<< ERROR!
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'test'
-	at com.qyd.learn.show.AppTest.shouldAnswerWithTrue(AppTest.java:28)
-

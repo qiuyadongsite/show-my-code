@@ -1,14 +1,12 @@
 package com.qyd.learn.show;
 
-import java.util.Vector;
-
 /**
- * Hello world!
- *
+ * @Auther: qiuyd
+ * @Date: 2019/8/7 15:15
+ * @Description:
  */
-
-public class App implements Runnable {
-    int b = 100;
+public class TestSync2 implements Runnable {
+   int b = 100;
     synchronized void m1() throws InterruptedException {
         b = 1000;
         Thread.sleep(500); //6
@@ -19,12 +17,12 @@ public class App implements Runnable {
         b = 2000;
     }
     public static void main(String[] args) throws InterruptedException{
-        App tt = new App();
+        TestSync2 tt = new TestSync2();
         Thread t = new Thread(tt); //1
         t.start(); //2
         tt.m2(); //3
         System.out.println("main thread b=" + tt.b); //4
-}
+    }
     @Override
     public void run() {
         try {

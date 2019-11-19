@@ -67,7 +67,12 @@ public class BinaryTreeDemo {
         }
 
     }
-
+    /**
+     *           A
+     *      B          C
+     * D        E    G      F
+     *
+     */
     /**
      * 遍历  前序遍历 中-左-右  a b d e c f
      * @param node

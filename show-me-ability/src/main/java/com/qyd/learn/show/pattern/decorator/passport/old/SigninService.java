@@ -16,6 +16,6 @@ public class SigninService implements ISigninService {
      * @return
      */
     public ResultMsg login(String username,String password){
-        return null;
+        return new ResultMsg(1,"sadf",null);
     }
 }
