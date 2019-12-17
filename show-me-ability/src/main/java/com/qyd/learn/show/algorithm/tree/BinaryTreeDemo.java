@@ -74,7 +74,7 @@ public class BinaryTreeDemo {
      *
      */
     /**
-     * 遍历  前序遍历 中-左-右  a b d e c f
+     * 遍历  前序遍历 中-左-右  a b d e c g f
      * @param node
      */
 
@@ -185,8 +185,15 @@ public class BinaryTreeDemo {
 
 
     }
+
     /**
-     * 后序调用 左 - 右 - 中  d b e f c a
+     *           A
+     *      B          C
+     * D        E    G      F
+     *
+     */
+    /**
+     * 后序调用 左 - 右 - 中  d e b g f c a
      * @param node
      */
     public void afterLoadTree(BinaryTreeNode node){
@@ -213,16 +220,12 @@ public class BinaryTreeDemo {
                 cur= cur.leftNode;
             }
              cur=stack.peek();
-
              if(cur.rightNode==null||cur.rightNode==pre){
                  stack.pop();
                  System.out.println("non after:"+ cur.data);
-
                  pre=cur;
                  cur=null;
-
              }else{
-
                  cur=cur.rightNode;
              }
 
@@ -244,8 +247,6 @@ public class BinaryTreeDemo {
                 cur=cur.leftNode;
 
             }
-
-
             cur= stack.peek();
 
             if(cur.rightNode==null||cur.rightNode==pre){
@@ -261,19 +262,81 @@ public class BinaryTreeDemo {
 
     }
 
+
+    /**
+     *           A
+     *      B          C
+     * D        E    G      F
+     *
+     */
+
+    public void midPrintNodes(BinaryTreeNode root){
+        Stack<BinaryTreeNode> stack=new Stack<>();
+        BinaryTreeNode cur=root;
+        while (!stack.isEmpty()||cur!=null){
+            while (cur!=null){
+                stack.push(cur);
+                cur=cur.leftNode;
+            }
+            cur=stack.pop();
+            System.out.println("node:"+cur.data);
+            cur=cur.rightNode;
+        }
+    }
+
+    public void prePrintNodes(BinaryTreeNode root){
+        Stack<BinaryTreeNode> stack=new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()){
+            BinaryTreeNode cur=stack.pop();
+            System.out.println("node:"+cur.data);
+            if (cur.rightNode!=null){
+                stack.push(cur.rightNode);
+            }
+            if(cur.leftNode!=null){
+                stack.push(cur.leftNode);
+            }
+        }
+    }
+
+    public void afterPrintNodes(BinaryTreeNode root){
+        Stack<BinaryTreeNode> stack=new Stack<>();
+        BinaryTreeNode  cur=root;
+        BinaryTreeNode  pre=null;
+        while(!stack.isEmpty()||cur!=null){
+            while (cur!=null){
+                stack.push(cur);
+                cur=cur.leftNode;
+            }
+            cur=stack.peek();
+            if(cur.rightNode==null||cur.rightNode==pre){
+
+                cur=stack.pop();
+                System.out.println("node:"+cur.data);
+                pre=cur;
+                cur=null;
+            }else{
+                cur=cur.rightNode;
+            }
+        }
+    }
+
+
+
     public static void main(String[] args) {
         BinaryTreeDemo binaryTreeDemo=new BinaryTreeDemo();
         binaryTreeDemo.createBinaryTree();
 
         System.out.println("binary tree hight:"+binaryTreeDemo.getHight(root));
 
-        /*binaryTreeDemo.preLoadTree(root);*/
+        binaryTreeDemo.midPrintNodes(root);
 
        /* binaryTreeDemo.midLoadTree(root); */
 
        /* binaryTreeDemo.afterLoadTree(root);*/
         /*binaryTreeDemo.nonPreLoadTree(root);*/
-        binaryTreeDemo.nonAfterLoad(root);
+     /*   binaryTreeDemo.nonAfterLoad(root);*/
     }
     /**
      *     A

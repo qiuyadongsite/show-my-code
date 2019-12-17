@@ -31,11 +31,7 @@ public class SearchBinaryTree {
         for(int i:datas){
             list.add(i);
         }
-
         SearchBinaryTreeNode node=tree.creatASearchTree(list);
-
-
-
         //删除一个
 
         int data=1;

@@ -14,16 +14,30 @@ public class LeetCodeDemo {
       /*  testLeetCode003();*/
        /* testLeetCode004();*/
 
-        testLeetCode005();
+       /* testLeetCode005();*/
+        testLeetCode006();
 
     }
 
+    private static void testLeetCode006() {
+        String s="AB" ;
+        String ret=new LeetCode006.Solution().convert(s,1);
+        System.out.println(ret);//"PAHNAPLSIIGYIR"
+
+    }
     private static void testLeetCode005() {
         String s="qeasdfsadfsadfwerwqesadfsadasdfsadfsa";
         String ret=new LeetCode005.Solution().longestPalindrome(s);
         System.out.println(ret);
 
     }
+    private static void testLeetCode0051() {
+        String s="baabbbcc";
+        String ret=new LeetCode0051.Solution().longestPalindrome(s);
+        System.out.println(ret);
+
+    }
+
 
     private static void testLeetCode004() {
 // * nums1 = [1, 3]

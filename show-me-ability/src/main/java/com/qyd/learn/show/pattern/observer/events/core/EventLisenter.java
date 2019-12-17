@@ -14,7 +14,7 @@ public class EventLisenter {
     //JDK底层的Lisenter通常也是这样来设计的
     protected Map<String,Event> events = new HashMap<String,Event>();
 
-    //事件名称和一个目标对象来触发事件
+
     public void addLisenter(String eventType,Object target){
         try {
             this.addLisenter(
