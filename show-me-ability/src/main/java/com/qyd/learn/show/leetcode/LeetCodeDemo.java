@@ -15,10 +15,23 @@ public class LeetCodeDemo {
        /* testLeetCode004();*/
 
        /* testLeetCode005();*/
-        testLeetCode006();
+       /* testLeetCode006();*/
+      /*  testLeetCode007();*/
+        testLeetCode008();
 
     }
+    private static void testLeetCode008() {
 
+        int ret=new LeetCode008.Solution().myAtoi("20000000000000000000");
+        System.out.println(ret);//"PAHNAPLSIIGYIR"
+
+    }
+    private static void testLeetCode007() {
+
+        int ret=new LeetCode007.Solution().reverse(-2147483412);
+        System.out.println(ret);//"PAHNAPLSIIGYIR"
+
+    }
     private static void testLeetCode006() {
         String s="AB" ;
         String ret=new LeetCode006.Solution().convert(s,1);
@@ -31,12 +44,7 @@ public class LeetCodeDemo {
         System.out.println(ret);
 
     }
-    private static void testLeetCode0051() {
-        String s="baabbbcc";
-        String ret=new LeetCode0051.Solution().longestPalindrome(s);
-        System.out.println(ret);
 
-    }
 
 
     private static void testLeetCode004() {
