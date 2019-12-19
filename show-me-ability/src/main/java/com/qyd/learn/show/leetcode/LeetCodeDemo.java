@@ -17,10 +17,32 @@ public class LeetCodeDemo {
        /* testLeetCode005();*/
        /* testLeetCode006();*/
       /*  testLeetCode007();*/
-        testLeetCode008();
+     /*   testLeetCode008();*/
+      /*  testLeetCode012();*/
+        testLeetCode013();
 
     }
-    private static void testLeetCode008() {
+
+    private static void testLeetCode013() {
+        //MCMXCIV
+        System.out.println(new LeetCode013.Solution().romanToInt("MCMXCIV"));
+    }
+
+    private static void testLeetCode012() {
+
+
+        String ret=new LeetCode012.Solution().intToRoman(4);
+        System.out.println(ret);//"PAHNAPLSIIGYIR"
+
+    }
+
+    private static void testLeetCode011() {
+
+
+        int ret=new LeetCode011.Solution().maxArea(new int[]{ 1,8,6,2,5,4,8,3,7});
+        System.out.println(ret);//"PAHNAPLSIIGYIR"
+
+    }  private static void testLeetCode008() {
 
         int ret=new LeetCode008.Solution().myAtoi("20000000000000000000");
         System.out.println(ret);//"PAHNAPLSIIGYIR"
