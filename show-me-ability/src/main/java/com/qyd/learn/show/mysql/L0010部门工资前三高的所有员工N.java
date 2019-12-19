@@ -51,5 +51,5 @@ on e1.DepartmentId=e2.DepartmentId and e1.Salary <e2.Salary
 
 GROUP BY e1.Id HAVING count( distinct e2.Salary)<=2  ) and e.DepartmentId=d.Id order by d.name, e.Salary desc
  */
-public class L0010部门工资前三高的所有员工 {
+public class L0010部门工资前三高的所有员工N {
 }

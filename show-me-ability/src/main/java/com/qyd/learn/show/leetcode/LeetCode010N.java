@@ -52,7 +52,7 @@ p = "mis*is*p*."
 链接：https://leetcode-cn.com/problems/regular-expression-matching
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class LeetCode010 {
+public class LeetCode010N {
     static  class Solution {
         public boolean isMatch(String s, String p) {
             //如果输入为空，返回匹配失败
