@@ -1,6 +1,7 @@
 package com.qyd.learn.show.leetcode;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @Auther: qiuyd
@@ -19,8 +20,22 @@ public class LeetCodeDemo {
       /*  testLeetCode007();*/
      /*   testLeetCode008();*/
       /*  testLeetCode012();*/
-        testLeetCode013();
+      /*  testLeetCode013();  */
 
+        testLeetCode014();
+    /*    testLeetCode015();*/
+
+    }
+
+    private static void testLeetCode015() {
+        //MCMXCIV
+        List<List<Integer>> lists = new LeetCode015N.Solution().threeSum(new int[]{0,1,1});
+        System.out.println(lists);
+    }
+
+    private static void testLeetCode014() {
+        //MCMXCIV
+        System.out.println(new LeetCode014.Solution().longestCommonPrefix(new String[]{"flower","flow","flight"}));
     }
 
     private static void testLeetCode013() {

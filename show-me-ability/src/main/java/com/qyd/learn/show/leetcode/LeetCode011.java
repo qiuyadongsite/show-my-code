@@ -29,19 +29,14 @@ public class LeetCode011 {
     static class Solution {
         public int maxArea(int[] height) {
             int retArea=0;
-            if(height.length<2){
-                return 0;
-            }
-            for(int i=0;i<height.length-1;i++){
-                for(int j=i+1;j<height.length;j++){
-                    int w=j-i;
-                    int h=height[j]>height[i]?height[i]:height[j];
-                    int Area=w*h;
-                    if(Area>retArea){
-                        retArea=Area;
-                    }
-                }
-            }
+           for(int i=0,j=height.length-1;i<j;){
+               int w=j-i;
+               int h=height[i]>height[j]?height[j--]:height[i++];
+               if(w*h>retArea){
+                   retArea=w*h;
+               }
+
+           }
             return retArea;
 
         }
