@@ -22,9 +22,107 @@ public class LeetCodeDemo {
       /*  testLeetCode012();*/
       /*  testLeetCode013();  */
 
-        testLeetCode014();
+        /*testLeetCode014();*/
+    /*    testLeetCode016();*/
+       /* testLeetCode017();*/
+       /* testLeetCode018();*/
+        /*testLeetCode019();*/
+     /*   testLeetCode020();*/
+      /*  testLeetCode022();*/
+    /*    testLeetCode025();*/
+     /*   testLeetCode026(); */
+      /*  testLeetCode027();*/
+      /*  testLeetCode028();*/
+        testLeetCode030();
     /*    testLeetCode015();*/
 
+    }
+
+    private static void testLeetCode030() {
+
+        // "wordgoodgoodgoodbestword"
+        //["word","good","best","word"]
+//"barfoothefoobarman"
+//["foo","bar"]
+        //"wordgoodgoodgoodbestword"
+        //["word","good","best","good"]
+
+        ///"ababaab"
+        //["ab","ba","ba"]
+        System.out.println(new LeetCode030串联所有单词的子串.Solution().findSubstring("ababaab",
+                new String[]{"ab","ba","ba"}));
+    }
+
+    private static void testLeetCode026() {
+        //给定 nums = [0,0,1,1,1,2,2,3,3,4],
+        System.out.println(new LeetCode026删除排序数组中的重复项.Solution().removeDuplicates(new int[]{1,1,2}));
+    }
+     private static void testLeetCode027() {
+        //给定nums = [3,2,2,3], val = 3,
+        System.out.println(new LeetCode027移除元素.Solution().removeElement(new int[]{3,2,2,3},2));
+    }
+  private static void testLeetCode028() {
+        //给定LeetCode028实现strStr"mississippi"
+      //"pi"
+        System.out.println(new LeetCode028实现strStr.Solution().strStr("mississippi","pi"));
+    }
+
+    private static void testLeetCode025() {
+        LeetCode024两两交换链表中的节点.ListNode l1 = new LeetCode024两两交换链表中的节点.ListNode(1);
+        LeetCode024两两交换链表中的节点.ListNode l2 = new LeetCode024两两交换链表中的节点.ListNode(2);
+        LeetCode024两两交换链表中的节点.ListNode l3 = new LeetCode024两两交换链表中的节点.ListNode(3);
+        LeetCode024两两交换链表中的节点.ListNode l4 = new LeetCode024两两交换链表中的节点.ListNode(4);
+        LeetCode024两两交换链表中的节点.ListNode l5 = new LeetCode024两两交换链表中的节点.ListNode(5);
+        l1.next=l2;
+        l2.next=l3;
+        l3.next=l4;
+        l4.next=l5;
+        new LeetCode024两两交换链表中的节点.Solution().swapPairs(l1);
+    }
+
+    private static void testLeetCode022() {
+        List<String> strings = new LeetCode022括号生成.Solution().generateParenthesis(3);
+        for(String s:strings){
+            System.out.println(s);
+        }
+
+        System.out.println();
+    }
+    private static void testLeetCode020() {
+        System.out.println(new LeetCode020有效的括号.Solution().isValid("(}"));
+    }
+    private static void testLeetCode019() {
+        //[-3,-2,-1,0,0,1,2,3]
+        //0
+        LeetCode019删除链表的倒数第N个节点.ListNode r1=new LeetCode019删除链表的倒数第N个节点.ListNode(1);
+        LeetCode019删除链表的倒数第N个节点.ListNode r2=new LeetCode019删除链表的倒数第N个节点.ListNode(2);
+        LeetCode019删除链表的倒数第N个节点.ListNode r3=new LeetCode019删除链表的倒数第N个节点.ListNode(3);
+        LeetCode019删除链表的倒数第N个节点.ListNode r4=new LeetCode019删除链表的倒数第N个节点.ListNode(4);
+        LeetCode019删除链表的倒数第N个节点.ListNode r5=new LeetCode019删除链表的倒数第N个节点.ListNode(5);
+        r1.next=r2;
+        /*r2.next=r3;
+        r3.next=r4;
+        r4.next=r5;*/
+
+        System.out.println(new LeetCode019删除链表的倒数第N个节点.Solution().removeNthFromEnd(r1,2));
+    }
+   private static void testLeetCode018() {
+        //[-3,-2,-1,0,0,1,2,3]
+        //0
+        System.out.println(new LeetCode018四数之和.Solution().fourSum(new int[]{-3,-2,-1,0,0,1,2,3},0));
+    }
+    private static void testLeetCode017() {
+        //M[1,0,-1,0,-2,2]
+        //0
+        System.out.println(new LeetCode017.Solution().letterCombinations("23"));
+    }
+    private static void testLeetCode016() {
+        //MCMXCIV[-1,0,1,1,55]
+        //3
+        //1
+        //1
+       int ret=new LeetCode016.Solution().threeSumClosest(new int[]{-1,0,1,1,55},3);
+        System.out.println(ret);
     }
 
     private static void testLeetCode015() {
